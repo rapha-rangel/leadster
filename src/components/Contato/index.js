@@ -15,9 +15,9 @@ import Logo from '../../imagens/logo.png';
 import { BiLogoInstagram, BiLogoLinkedin, BiLogoFacebook} from 'react-icons/bi';
 
 
-const Contact = () =>{
+const Contato = () =>{
   return(
-    <Section>
+    <Section id="contato">
       <Container>
         <Header>
           <ImageLogo src={Logo} alt="Logo Image"/>
@@ -71,4 +71,4 @@ const Contact = () =>{
   )
 }
 
-export default Contact;
+export default Contato;

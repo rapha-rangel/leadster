@@ -11,9 +11,9 @@ import {Section,
         Hr,
         SubtitleSpan} from './styled';
 
-const Title = () =>{
+const Home = () =>{
   return(
-    <Section>
+    <Section id="home">
       <Container>
         <LogoDiv>
           <Logo>WEBINARS EXCLUSIVOS</Logo>
@@ -29,4 +29,4 @@ const Title = () =>{
   )
 }
 
-export default Title;
+export default Home;

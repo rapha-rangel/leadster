@@ -5,8 +5,6 @@ export const Section = styled.section`
   background-color: white;
 `
 export const Container = styled.div`
-  margin-left: 1rem;
-  margin-right: 1rem;
 `
 export const Header = styled.div`
 `

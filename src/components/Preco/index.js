@@ -25,9 +25,9 @@ import SeloRD from '../../imagens/selo_RD.png';
 import NoCard from '../../imagens/no-card-dark.webp';
 import StarRating from '../../imagens/rating.webp';
 import Comparative from '../../imagens/comparativo_img_CTA.png';
-const Info =()=>{
+const Preco =()=>{
   return(
-    <Section>
+    <Section id='preco'>
       <Container>
         <Title>
           Pronto para triplicar sua
@@ -64,4 +64,4 @@ const Info =()=>{
   )
 }
 
-export default Info;
+export default Preco;

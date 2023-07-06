@@ -1,19 +1,40 @@
 import {Section, Container} from './styled';
 import Accordion from '../Accordion';
-import {accordionData} from '../utils/content'
+import { connect, useDispatch } from 'react-redux';
+import { setList } from '../../redux/reducers';
+import { useEffect} from 'react';
 
 const Ferramenta = ()=>{
+  const titleArray =["Agências", "Chatbot", "Marketing Digital", "Geração de Leads", "Mídia Paga"];
+  const dispatch = useDispatch();
+
+  useEffect(()=>{
+    fetch('./data.json',{
+      headers:{
+        Accept: "application/json"
+      }
+    }).then(res => res.json())
+      .then(res=> {
+        dispatch(setList(res.data))
+      });
+  },[])
+
   return(
-    <Section>
+    <Section id="ferramenta">
       <Container>
-        {accordionData && accordionData.map(({title, content}) =>(
-          <Accordion 
-          title={title}
-          content={content}/>
-        ))}
+        {titleArray && titleArray.map((item) =>(
+          <Accordion item={item}>
+          </Accordion>
+          )
+        )}
       </Container>
     </Section>
   )
 }
 
-export default Ferramenta;
+const mapStateToProps=(state)=>({
+  list: state.modal.list
+})
+
+
+export default connect(mapStateToProps)(Ferramenta);

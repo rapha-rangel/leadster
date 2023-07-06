@@ -7,6 +7,8 @@ export const Section = styled.section`
 `
 export const Container = styled.div`
   display: grid;  
+  align-items: center;
+  justify-content: center;
   margin-left: 1rem;
   margin-right: 1rem;
 `
@@ -44,6 +46,7 @@ export const Content = styled.div`
 export const ButtonDiv = styled.div`
   display: flex;  
   align-items: center;
+  justify-content: center;
   margin-bottom: 0.5rem;
 `
 export const ButtonDemo = styled.button`
